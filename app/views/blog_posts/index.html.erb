@@ -4,15 +4,10 @@
 <div class="blog_post">
   <h2><%= link_to blog_posts.title, blog_post_path(blog_posts) %></h2>
   <p><%= blog_posts.body %></p>
-    <%
-=begin%>
- <p><%= link_to "Edit", edit_blog_post_path(blog_posts) %></p> 
-<%
-=end%>
-    <p><%= link_to "Delete", blog_post_path(blog_posts),
-            method: :delete,
-            data: { confirm: "Are you sure you want to delete #{blog_posts.title}?" } %></p>
+ 
+ <p><%= link_to "Edit", edit_blog_post_path(blog_posts) %> , <%= link_to "New", new_blog_post_path(blog_posts) %></p> 
 </div>
+
 
 <% end %>
 ```

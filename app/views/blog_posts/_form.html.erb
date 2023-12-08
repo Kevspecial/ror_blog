@@ -1,0 +1,21 @@
+
+<%= form_with(model:@blog_post, local: true) do |form| %>
+  <% if @blog_post.errors.any? %>
+    <div>
+      <% @blog_post.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger">
+          <p><%= msg %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <!-- Your form fields go here -->
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <br>
+  <%= form.label :body %>
+  <%= form.text_area :body %>
+  <br>
+ <%= form.submit(@blog_post.new_record? ? "Create Blog Post" : "Update Blog Post") %>
+<% end %>

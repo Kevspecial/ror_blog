@@ -1,10 +1,11 @@
+<%# Add the missing import statements %>
+<%# Import the necessary Rails helper methods %>
+<%# Add the missing import statements %>
 <h1> Show Blog Post </h1>
-<%
-=begin%>
- <% @blog_post = BlogPost.find(params[:id]) %> 
-<%
-=end%>
+<% @blog_post = BlogPost.find(params[:id]) %>
+  
 
 <h1><%= @blog_post.title %></h1>
 <p><%= @blog_post.body %></p>
 
+<p><%= link_to "Back", blog_posts_path %> | <%= link_to "Edit", edit_blog_post_path(@blog_post) %> | <%= link_to "New", new_blog_post_path(@blog_post) %></p>
