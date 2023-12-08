@@ -2,6 +2,7 @@
 
 <form>
   <%= render partial: "form", locals: { blog_post: @blog_post } %>
-  <%= button_to "Back", root_path %>
+   <%= link_to "Home", blog_posts_path %> | <%= link_to "Back", blog_post_path(@blog_post) %> |
+
   <%= button_to "Delete", @blog_post, method: :delete, data: { confirm: 'Are you sure?' } %>
 </form>
