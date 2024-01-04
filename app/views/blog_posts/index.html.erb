@@ -1,11 +1,14 @@
 <h1>BlogPosts#index</h1>
+
 <p>Find me in app/views/blog_posts/index.html.erb</p>
+
 <% @blog_posts.each do |blog_posts| %>
+<div> <span> Create a <%= link_to "New", new_blog_post_path(blog_posts) %> Blog </span> </div>
 <div class="blog_post">
   <h2><%= link_to blog_posts.title, blog_post_path(blog_posts) %></h2>
   <p><%= blog_posts.body %></p>
  
- <p><%= link_to "Edit", edit_blog_post_path(blog_posts) %> , <%= link_to "New", new_blog_post_path(blog_posts) %></p> 
+ <p><%= link_to "Edit", edit_blog_post_path(blog_posts) %> </p> 
 </div>
 
 
